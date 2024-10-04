@@ -15,10 +15,10 @@ fi
 if [ ! -f kernel-stable-4.4-rockpis/.config ]; then
     ./cc-kernel.sh kernel-stable-4.4-rockpis/ rk3308_linux_defconfig
     cat <<EOF >> kernel-stable-4.4-rockpis/arch/arm64/boot/dts/rockchip/rk3308-rock-pi-s.dts
-    &uart0 {
-    status = "okay";
-    };
-    EOF
+&uart0 {
+status = "okay";
+};
+EOF
     sed -i 's/YYLTYPE yylloc;/extern YYLTYPE yylloc;/' kernel-stable-4.4-rockpis/scripts/dtc/dtc-lexer.lex.c
     sed -i 's/YYLTYPE yylloc;/extern YYLTYPE yylloc;/' kernel-stable-4.4-rockpis/scripts/dtc/dtc-lexer.lex.c_shipped
     sed -i 's/CONFIG_USB_STORAGE=m/CONFIG_USB_STORAGE=y/' kernel-stable-4.4-rockpis/.config

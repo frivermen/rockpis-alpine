@@ -1,0 +1,8 @@
+alpine-3.20/
+downloads/
+kernel-stable-4.4-rockpis/
+mnt/
+out/
+toolchain/
+u-boot-2024.07/
+intercom/

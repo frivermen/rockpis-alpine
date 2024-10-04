@@ -19,6 +19,8 @@ mount "${1}1" mnt/boot/
 cp -rp alpine-3.20/* mnt/
 cp -rp out/kernel-stable-4.4-rockpis/* mnt/boot/
 cp -rp overlay_rootfs/* mnt/
+chmod 755 mnt/root/start_chroot.sh
+chmod 755 mnt/root/init_setup.sh
 umount mnt/boot
 umount mnt
 
