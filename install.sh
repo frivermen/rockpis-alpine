@@ -9,8 +9,7 @@ EOF
 sync
 mkfs.vfat ${1}1
 mkfs.ext4 ${1}2
-if [ ! -e mnt/ ]
-then
+if [ ! -e mnt/ ]; then
   mkdir mnt
 fi
 rm -rf mnt/*
