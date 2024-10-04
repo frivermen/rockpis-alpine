@@ -9,7 +9,7 @@ apk update
 
 sync && sleep 1
 
-apk add alpine-base alpine-keys openrc apk-tools busybox busybox-suid dbus-libs libblkid libcap libcom_err libc-utils libnl3 libressl libusb libuuid musl openrc zlib dropbear dropbear-scp dropbear-ssh dropbear-dbclient dropbear-openrc alsa-tools alsa-utils
+apk add alpine-base alpine-keys openrc apk-tools busybox busybox-suid dbus-libs libblkid libcap libcom_err libc-utils libnl3 libressl libusb libuuid musl openrc zlib dropbear dropbear-scp dropbear-ssh dropbear-dbclient dropbear-openrc e2fsprogs alsa-tools alsa-utils
 
 rc-update add crond sysinit
 rc-update add devfs sysinit
