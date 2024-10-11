@@ -24,7 +24,7 @@ chmod 755 mnt/root/init_setup.sh
 umount mnt/boot
 umount mnt
 
-./flash-u-boot.sh u-boot-2024.07/ $1
+./flash-u-boot.sh out/u-boot-2024.07/ $1
 
 echo "
   base rootfs, u-boot, kernel installed

@@ -39,7 +39,7 @@ fi
 export ARCH=arm64
 export CROSS_COMPILE=$GCC_LINARO_DIR/bin/aarch64-linux-gnu-
 export BL31=$RKBIN_DIR/bin/rk33/rk3308_bl31_v2.26.elf
-export ROCKCHIP_TPL=$RKBIN_DIR/bin/rk33/rk3308_ddr_589MHz_uart0_m0_v2.06.bin
+export ROCKCHIP_TPL=$RKBIN_DIR/bin/rk33/rk3308_ddr_589MHz_uart0_m0_v2.07.bin
 
 if [ ! -z "$1" ]; then
   cd $1
@@ -52,7 +52,7 @@ make -j$[($(nproc)*2)] $2
 if [ $? -eq 0 ]; then
   $RKBIN_DIR/tools/loaderimage --pack --uboot u-boot-dtb.bin uboot.img 0x600000 --size 1024 1
   $RKBIN_DIR/tools/mkimage -n rk3308 -T rksd -d $ROCKCHIP_TPL idbloader.img
-  cat $RKBIN_DIR/bin/rk33/rk3308_miniloader_v1.39.bin >> idbloader.img
+  cat $RKBIN_DIR/bin/rk33/rk3308_miniloader_v1.36_sd.bin >> idbloader.img
   cat >trust.ini <<EOF
 [VERSION]
 MAJOR=1
